@@ -1,0 +1,137 @@
+
+
+.Button{
+    overflow: hidden;
+    position: relative;
+   pointer-events: inherit;
+    &__cover{
+        position: relative;
+        padding: 0  0 1  *100% 0;
+        width: 100%;
+        height: 100%;
+      
+    }
+    &__absolute{
+    position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   padding: rem(3) rem(3);
+    }
+    &.main{
+        transition: all 0.3s ease 0s;
+     border: 1px solid #ffffff;
+     border-radius: 4px;
+      background: none;
+       font-family: 'Ubuntu';
+font-size: 16px;
+@include adaptiveValue("font-size",16 ,12 );
+@include adaptiveValue("line-height",52 ,16 );
+font-style: normal;
+font-weight: 700;
+line-height: 52px; /* 325% */
+letter-spacing: 0.5px;
+text-transform: uppercase;
+        
+        color: #FFFFFF;
+        @include adaptiveValue("width", 278,180 );
+        @media (max-width:$mobileSmall){
+            width: auto; 
+            flex: 0 1 60%;
+       }
+        .Button__cover{
+            padding: 0  0 52/278  *100% 0;
+        }
+        &.orange{
+            background: #FF5A30;
+            border-color:#ff593000; 
+            @include adaptiveValue("width", 224,120 );
+            @media (max-width:$mobileSmall){
+                 width: auto; 
+                 flex: 0 1 50%;
+            }
+            .Button__cover{
+                padding: 0  0 52/224  *100% 0;
+            } 
+            @media (any-hover: hover){
+                &:hover{
+                    transition: all 0.3s ease 0s;
+                     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+                    border-color:#f9f9f9; 
+                    color: #FFFFFF;
+                }
+            }
+            &.footer{
+                width: rem(40);
+                .Button__cover{
+                    padding: 0  0 100% 0;
+                } 
+              
+            }
+            &.footer-top{
+                @include adaptiveValue("width", 150,90 );
+            }
+            &.know{
+                width: rem(104);
+              
+                font-family: 'Ubuntu';
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 44px; /* 314.286% */
+letter-spacing: 0.5px;
+text-transform: uppercase;
+                .Button__cover{
+                    padding: 0  0 44/104  *100% 0;
+                } 
+                @media (max-width:$mobile){
+                    width:100%; 
+                    .Button__cover{
+                        padding: 0  0 rem(44) 0;
+                    } 
+                }
+            }
+        }
+       
+    }
+    
+   
+    @media (any-hover: hover){
+        &:hover{
+            transition: all 0.3s ease 0s;
+            background: #75758A;
+            color: #FFFFFF;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+    }
+}
+
+.ripple{
+    &.origin{
+        background-color: rgba(173, 158, 158, 0.7);
+        border: 1px solid #f7f6f6 ;
+    }
+    &.two{
+        background-color: rgba(173, 158, 158, 0.7);
+        border: 1px solid #f7f6f6 ;
+    }
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: ripple 600ms linear forwards;
+    transition: all 0.6s ease 0s;
+    transform-origin: center;
+    @keyframes ripple {
+        0% {
+            border-radius: 50%;
+            transform: scale(0);
+        }
+        100% {
+            border-radius: 50%;
+            transform: scale(2);
+        }
+    }
+
+}
+
+

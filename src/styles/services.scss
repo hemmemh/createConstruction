@@ -1,0 +1,145 @@
+.Services {
+position: relative;
+padding-bottom: rem(80);
+padding-top: rem(212);
+@media (max-width:$mobile){
+    padding-bottom: rem(20);
+    padding-top: rem(40);   
+}
+    &__back {
+        z-index: -1;
+        position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+        img{
+            position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+        }
+    }
+
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__cards {
+        display: flex;
+        margin-bottom: rem(85);
+        @media (max-width:$mobile){
+            margin-bottom: rem(25);
+        }
+        gap: rem(30);
+        @media (max-width:$mobile){
+             flex-wrap: wrap; 
+        }
+    }
+
+    &__card {
+       
+      
+        flex: 1 1 auto;
+        @media (max-width:$mobile){
+            flex: 1 0 calc(50% - 15px);
+           }
+    }
+
+    &__bottom {
+    }
+}
+.Core {
+
+    &__top {
+    }
+
+    &__title {
+    }
+
+    &__text {
+    }
+}
+.card-services {
+   
+    position: relative;
+
+    &__cover2{
+        padding: 0 0 100% 0;
+        position: relative;
+    }
+    &__cover{
+       position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+    }
+    
+    cursor: pointer;
+position: relative;
+border-radius: 4px;
+border: 1px solid var(--gray-300, #E5E8ED);
+background: var(--white, #FFF);
+box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+@media (any-hover: hover){
+    &:hover{
+        background: var(--white, #000000);
+        transition: all 0.3s ease 0s;
+        
+        .card-services__image{
+            opacity: 0.6;
+        }
+        .card-services__name{
+            color: #FFF;
+        }
+    }
+}
+
+
+    &__image {
+   
+        transition: all 0.3s ease 0s;
+        opacity: 0;
+        position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+        img{
+            position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        gap: rem(24);
+       
+    }
+
+    &__icon {
+    }
+
+    &__name {
+        color: var(--gray-900, #1E212C);
+text-align: center;
+/* lead/bold */
+font-family: Ubuntu;
+font-size: 20px;
+@include adaptiveValue("font-size",20 , 16);
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 30px */
+    }
+}
+.bottom-services {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: rem(20);
+    &__name {
+        font-family: 'Ubuntu';
+font-size: 28px;
+@include adaptiveValue("font-size",28 , 13);
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 42px */
+    }
+}
+.main {
+}
+.orange {
+}

@@ -1,0 +1,109 @@
+.Know {
+    
+    transform: translate(0,80px);
+    @media (max-width:$mobile){
+        transform: translate(0,0);
+    }
+margin-top: rem(168);
+
+@media (max-width:$mobile){
+    margin-top: rem(30);  
+}
+    &__container {
+    }
+
+    &__body {
+        @media (max-width:$mobile){
+            box-shadow: none;
+        }
+     padding: rem(48) rem(10);
+     border-radius: 4px;
+     background: var(--white, #FFF);
+     /* shadow/small */
+     box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+     
+    }
+
+    &__title {
+        font-family: 'Ubuntu';
+font-size: 28px;
+@include adaptiveValue("font-size", 28, 14);
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 42px */
+text-align: center;
+margin-bottom: rem(32);
+    }
+
+    &__actions {
+        @media (max-width:$mobile){
+          margin-top: 0;
+          margin-bottom: 0;
+          transform: translate(0,0);
+        }
+        display: flex;
+        gap: rem(24);
+        margin-top: 130px;
+        margin-bottom: -80px;
+        transform: translate(0,-80px);
+        justify-content: center;
+        @media (max-width:$mobile){
+             flex-direction: column; 
+             flex-wrap: wrap;
+        }    
+    }
+
+    &__action {
+        &:nth-child(1){
+            flex: 0 1 260px;
+            @media (max-width:$mobile){
+                flex: 1 1 auto;
+            }
+        }
+        &:nth-child(2){
+            flex: 0 1 260px;
+            @media (max-width:$mobile){
+                flex: 1 1 auto;
+            }
+        }
+        &:nth-child(3){
+            @media (max-width:$mobile){
+                flex: 1 1 auto;
+            }
+        }
+        &:nth-child(4){
+            align-self: flex-end;
+            @media (max-width:$mobile){
+                align-self: auto;
+            }
+        }
+    }
+
+    &__name {
+        font-family: 'Ubuntu';
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 21px */
+margin-bottom: rem(11);
+    }
+
+    &__input {
+       
+        font-family: 'Ubuntu';
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 21px */
+        border-radius: 4px;
+        width: 100%;
+border: 1px solid var(--gray-400, #D7DADD);
+padding: rem(12) rem(0) rem(12) rem(16);
+    }
+}
+.main {
+}
+.orange {
+}
+.know {
+}

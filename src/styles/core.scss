@@ -1,0 +1,115 @@
+.Core {
+@include adaptiveValue("margin-top",180 , 40);
+
+    &__container {
+    }
+
+    &__top {
+        @include adaptiveValue("margin-bottom",60 ,24 );
+    }
+
+    &__title {
+        font-family: 'Ubuntu';
+        @include adaptiveValue("font-size",46 ,24 );
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%; /* 59.8px */
+        text-align: center;
+        margin-bottom: rem(24);
+        @include adaptiveValue("margin-bottom",24 ,12 );
+    }
+
+    &__text {
+        font-family: 'Ubuntu';
+        @include adaptiveValue("font-size", 18, 9);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 27px */
+        text-align: center;
+    }
+
+    &__body {
+    }
+}
+.body-core {
+display: flex;
+@media (max-width:$tablet){
+    flex-direction: column;
+    gap: rem(15);
+}
+    &__item {
+    }
+}
+.item-core {
+flex: 0 0 33.3333%;
+display: flex;
+
+&._right{
+    justify-content: flex-end;     
+    position: relative;
+    @media (max-width:$tablet){
+        justify-content: center;
+        &::before{
+            content:'';
+            display: none;
+        }
+    } 
+    &::before{
+        content:'';
+        position: absolute;width: rem(1);height: 100%;top: 0;left: 0;
+        background: linear-gradient(315deg, rgba(218, 219, 221, 0.00) 0%, rgba(218, 219, 221, 0.50) 12.33%, #DADBDD 51.91%, rgba(218, 219, 221, 0.50) 87.85%, rgba(218, 219, 221, 0.00) 100%);
+    }    
+}
+&._center{
+    justify-content: center;  
+    position: relative;
+   @media (max-width:$tablet){
+    &::before{
+        content:'';
+        display: none;
+    }
+   }
+    &::before{
+        content:'';
+        position: absolute;width: rem(1);height: 100%;top: 0;left: 0;
+        background: linear-gradient(315deg, rgba(218, 219, 221, 0.00) 0%, rgba(218, 219, 221, 0.50) 12.33%, #DADBDD 51.91%, rgba(218, 219, 221, 0.50) 87.85%, rgba(218, 219, 221, 0.00) 100%);
+    } 
+       
+}
+@media (max-width:$tablet){
+    justify-content: center;
+} 
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: rem(285);
+       
+    }
+
+    &__image {
+        margin-bottom: rem(24);
+    }
+
+    &__title {
+        margin-bottom: rem(8);
+        font-family: 'Ubuntu';
+font-size: 20px;
+@include adaptiveValue("font-size", 20, 12);
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 30px */
+    }
+
+    &__text {
+        font-family: 'Ubuntu';
+font-size: 16px;
+@include adaptiveValue("font-size", 16, 9);
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 25.6px */
+color: #787A80;
+text-align: center;
+    }
+}
