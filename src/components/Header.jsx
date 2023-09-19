@@ -22,6 +22,13 @@ const Header = () => {
       document.removeEventListener('scroll',headerActiveF)
     }
   }, [])
+useEffect(() => {
+  if (menu) {
+    document.body.classList.add('hidden')
+  }else{
+    document.body.classList.remove('hidden')
+  }
+}, [menu])
 
 
   return (
