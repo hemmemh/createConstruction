@@ -21,6 +21,7 @@
         height: rem(92);
         @media (max-width:$mobile){
             height: rem(52);
+            padding: 10px 0 ;
         }
         display: flex;
         align-items: center;
@@ -104,10 +105,17 @@ z-index: 101;
     &__svg {
         position: relative;
         padding-top: rem(5);
+        @media (max-width:$mobile){
+            padding-top: rem(2);
+        }
         &::before{
             color: #FF5A30;
             font-size: rem(40);
             position: relative;
+            @media (max-width:$mobile){
+                font-size: rem(35);
+                padding-top: rem(0);
+            }
             
         }
     }
@@ -126,6 +134,9 @@ font-size: 14px;
 font-style: normal;
 font-weight: 700;
 line-height: 150%; /* 21px */
+@media (max-width:$mobile){
+    line-height: 120%; /* 21px */ 
+}
     }
 
     &__bottom {
@@ -135,6 +146,10 @@ line-height: 150%; /* 21px */
         font-weight: 400;
         line-height: 150%; /* 27px */
         white-space: nowrap;
+        @media (max-width:$mobile){
+            font-size: 14px;
+           
+        }
     }
 }
 
