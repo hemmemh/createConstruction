@@ -26,8 +26,9 @@ z-index: 1;
 position: relative;
 padding-right: rem(10);
 
-@include adaptiveValue("padding-top", 220, 80);
+@include adaptiveValue("padding-top", 110, 80);
 @include adaptiveValue("padding-bottom", 353, 80);
+height: calc(100vh + 30px); 
 @media (max-width:$mobile){
      height: calc(100vh - rem(52)); 
 }
